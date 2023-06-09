@@ -53,6 +53,21 @@ body .display {
   grid-template-columns: 100%;
   justify-content: center;
   margin: 50px 20px;
+  position: relative;
+}
+body .display h2 {
+  position: absolute;
+  justify-self: center;
+  letter-spacing: 2px;
+  font-size: 2em;
+  color: green;
+}
+body .display h3 {
+  position: absolute;
+  justify-self: center;
+  letter-spacing: 2px;
+  font-size: 2em;
+  color: red;
 }
 body .display a {
   text-decoration: none;

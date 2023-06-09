@@ -58,7 +58,21 @@ body{
         grid-template-columns: 100%;
         justify-content: center;
         margin: 50px 20px;
-        
+        position: relative;
+        h2{
+            position: absolute;
+            justify-self: center;
+            letter-spacing: 2px;
+            font-size: 2em;
+            color: green;
+        }
+        h3{
+            position: absolute;
+            justify-self: center;
+            letter-spacing: 2px;
+            font-size: 2em;
+            color: red;
+        }
         a{
             text-decoration: none;
             margin-top: 20px;
@@ -77,6 +91,7 @@ box-shadow: 4px 3px 44px -18px rgba(0,0,0,0.75);
                 color: black;
                // transition: 0.4s;
             }
+            
             p{
                 font-size: 1em;
                 letter-spacing: 1.2px;

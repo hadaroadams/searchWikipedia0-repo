@@ -5,9 +5,11 @@ const show = document.querySelector('.display')
 let text 
 async function fetchData(){
     const url=`https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=20&format=json&origin=*&srsearch=${input.value}`;
+    show.innerHTML='<h2>Loading...</h2>'
     try{
         let data = await fetch(url)
         let respos = await data.json()
+        show.innerHTML=''
         console.log(respos)
         const news=respos.query.search
         news.map((item)=>{
@@ -38,9 +40,12 @@ input.addEventListener('input',(e)=>{
    console.log(text)
 })
 form.addEventListener('submit',(e)=>{
-    e.preventDefault()
     show.innerHTML=''
     fetchData()
+    e.preventDefault()
+    if(input.value==""){
+        show.innerHTML="<h3> Empty search</h3>"
+    }
 })
 
 
